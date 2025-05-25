@@ -762,7 +762,7 @@ class ProgramacaoGenetica:
                     robo.distancia_percorrida * 0.05 -  # Aumentado o peso da distância
                     robo.colisoes * 50 -  # Aumentada a penalidade por colisões
                     (100 - robo.energia) * 0.5 +  # Reduzida a penalidade por energia
-                    (800 if robo.meta_atingida else 0) +  # Bônus por atingir meta
+                    (500 if robo.meta_atingida else 0) +  # Bônus por atingir meta
                     (15 * (ambiente.max_tempo - ambiente.tempo) if robo.meta_atingida else 0)  # Bônus por eficiência temporal
                 )
                 
